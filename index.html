@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoLoUso — Marketplace de juguetes usados</title>
+  <meta name="description" content="Comprá y vendé juguetes usados de forma segura. Dale una segunda vida a los juguetes que tus hijos ya no usan." />
+  <meta property="og:title" content="NoLoUso — Marketplace de juguetes usados" />
+  <meta property="og:description" content="Comprá y vendé juguetes usados de forma segura." />
+  <meta property="og:image" content="https://nolouso.app/assets/og-image.png" />
+  <meta property="og:url" content="https://nolouso.app" />
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f5f3ff',
+              100: '#ede9fe',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%); }
+    .gradient-text { background: linear-gradient(135deg, #7c3aed, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="assets/icon.png" alt="NoLoUso" class="w-8 h-8 rounded-xl" onerror="this.style.display='none'" />
+        <span class="font-black text-xl tracking-tight">NoLoUso</span>
+      </div>
+      <a href="#descargar" class="bg-brand-600 text-white text-sm font-bold px-5 py-2 rounded-full hover:bg-brand-700 transition">
+        Descargar gratis
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-20 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-600 text-sm font-semibold px-4 py-2 rounded-full mb-6">
+        <span>🧸</span>
+        <span>Marketplace de juguetes usados</span>
+      </div>
+      <h1 class="text-5xl sm:text-6xl font-black tracking-tight leading-tight mb-6">
+        Dale una segunda vida<br />
+        <span class="gradient-text">a los juguetes</span>
+      </h1>
+      <p class="text-xl text-slate-500 leading-relaxed mb-10 max-w-xl mx-auto">
+        Comprá y vendé juguetes usados de forma segura. Ahorrá dinero, reducí residuos y conectate con familias de tu zona.
+      </p>
+      <div id="descargar" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://play.google.com/store/apps/details?id=com.nolouso.app" target="_blank" rel="noopener"
+           class="flex items-center gap-3 bg-slate-900 text-white px-6 py-4 rounded-2xl hover:bg-slate-800 transition shadow-lg">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.18 23.76a2 2 0 0 1-.64-.48 2 2 0 0 1-.41-1.26V1.98A2 2 0 0 1 2.54.72L2.6.66l11.84 11.84-11.26 11.26zM20.54 13.7l-2.8 1.6-3.24-3.24 3.24-3.24 2.84 1.63a1.98 1.98 0 0 1 0 3.25zM4.47.12l11.83 11.83-3.23 3.23L4.47.12z"/>
+          </svg>
+          <div class="text-left">
+            <div class="text-xs text-slate-400 font-medium">Disponible en</div>
+            <div class="text-base font-bold leading-tight">Google Play</div>
+          </div>
+        </a>
+        <div class="flex items-center gap-3 bg-slate-100 text-slate-400 px-6 py-4 rounded-2xl cursor-not-allowed">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <div class="text-left">
+            <div class="text-xs text-slate-400 font-medium">Próximamente</div>
+            <div class="text-base font-bold leading-tight">App Store</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-20 px-6 bg-slate-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-black text-center mb-4">¿Cómo funciona?</h2>
+      <p class="text-slate-500 text-center mb-14 text-lg">Simple, seguro y sin complicaciones.</p>
+      <div class="grid sm:grid-cols-3 gap-8">
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 text-center">
+          <div class="text-5xl mb-4">📸</div>
+          <h3 class="text-lg font-bold mb-2">Publicá en segundos</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Sacale una foto al juguete, ponele un precio y listo. Tu publicación queda activa de inmediato.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 text-center">
+          <div class="text-5xl mb-4">💬</div>
+          <h3 class="text-lg font-bold mb-2">Coordiná la entrega</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Chateá con el vendedor, acordá el punto de encuentro y confirmá la entrega con un PIN seguro.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 text-center">
+          <div class="text-5xl mb-4">🔒</div>
+          <h3 class="text-lg font-bold mb-2">Pagos protegidos</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Pagá con Mercado Pago o con tu saldo en la app. La reserva se libera solo cuando confirmás la entrega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUE -->
+  <section class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid sm:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-black mb-6">Por qué NoLoUso</h2>
+          <ul class="space-y-5">
+            <li class="flex gap-4">
+              <span class="text-2xl">♻️</span>
+              <div>
+                <div class="font-bold mb-1">Menos residuos</div>
+                <div class="text-slate-500 text-sm">Los juguetes tienen una vida útil mucho más larga que el tiempo que un chico los usa. Dale una segunda oportunidad.</div>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-2xl">💰</span>
+              <div>
+                <div class="font-bold mb-1">Ahorrá en lo que importa</div>
+                <div class="text-slate-500 text-sm">Comprá juguetes de calidad a una fracción del precio. Vendé los que ya no usás y recuperá plata.</div>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-2xl">🛡️</span>
+              <div>
+                <div class="font-bold mb-1">Comunidad confiable</div>
+                <div class="text-slate-500 text-sm">Sistema de reputación, verificación de usuarios y soporte ante cualquier inconveniente.</div>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-2xl">📍</span>
+              <div>
+                <div class="font-bold mb-1">Cerca tuyo</div>
+                <div class="text-slate-500 text-sm">Encontrá juguetes disponibles en tu zona para que la entrega sea rápida y fácil.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="gradient-bg rounded-3xl p-10 text-white text-center">
+          <div class="text-6xl font-black mb-2">100%</div>
+          <div class="text-xl font-bold mb-4">gratuito para compradores</div>
+          <p class="text-white/80 text-sm leading-relaxed">Registrarse y explorar publicaciones es completamente gratis. Solo se cobra una pequeña comisión al vendedor cuando se concreta la venta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-20 px-6 gradient-bg text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-black mb-4">Empezá hoy</h2>
+      <p class="text-white/80 text-lg mb-10">Descargá NoLoUso gratis y encontrá juguetes cerca tuyo.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.nolouso.app" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-3 bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-100 transition shadow-xl">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.18 23.76a2 2 0 0 1-.64-.48 2 2 0 0 1-.41-1.26V1.98A2 2 0 0 1 2.54.72L2.6.66l11.84 11.84-11.26 11.26zM20.54 13.7l-2.8 1.6-3.24-3.24 3.24-3.24 2.84 1.63a1.98 1.98 0 0 1 0 3.25zM4.47.12l11.83 11.83-3.23 3.23L4.47.12z"/>
+        </svg>
+        Descargar en Google Play
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 px-6 bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="font-bold text-white">NoLoUso</div>
+      <div class="flex gap-6">
+        <a href="terms.html" class="hover:text-white transition">Términos y condiciones</a>
+        <a href="privacy.html" class="hover:text-white transition">Privacidad</a>
+        <a href="mailto:hola@nolouso.app" class="hover:text-white transition">Contacto</a>
+      </div>
+      <div>© 2025 NoLoUso. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
